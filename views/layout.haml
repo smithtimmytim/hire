@@ -1,0 +1,20 @@
+!!!
+%html
+  %head
+    %meta{ content: 'text/html; charset=UTF-8', "http-equiv" => "Content-Type" }
+    %meta{ charset: 'utf-8' }
+    %title Hire Timothy B. Smith
+    %link{ href: '//cloud.typography.com/6973314/6451952/css/fonts.css', rel: 'stylesheet', type: 'text/css' }
+    %link{ href: '/assets/global.css', rel: 'stylesheet', type: 'text/css' }
+    %meta{ content: 'width=device-width, initial-scale=1, maximum-scale=1', name: 'viewport' }
+  %body
+    %header
+      %h1
+        %a{ href: '/', rel: 'home' } I’m Tim Smith. Hire me!
+    %main.main{ role: 'main' }
+      = yield
+    %footer
+      %p
+        © 2012-#{Time.now.year}
+        %a{ href: 'https://ttimsmith.com', rel: 'external nofollow' }
+          Timothy B. Smith

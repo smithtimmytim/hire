@@ -1,0 +1,161 @@
+// -------------------------------
+// IMAGES
+// -------------------------------
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+.border--white {
+  background: white;
+  padding: 10px;
+}
+
+figure {
+  margin-bottom: 1.8rem;
+  margin-top: 1.8rem;
+}
+
+figcaption {
+  @extend %sans;
+
+  color: lighten($dark-color, 20%);
+  font-size: .9rem;
+  line-height: 1.6;
+  margin-top: .5rem;
+  code {
+    font-size: .9rem;
+    @media #{$medium-up} {
+      font-size: .7rem;
+    }
+  }
+  @media #{$medium-up} {
+    font-size: .75rem;
+  }
+}
+
+.extendout {
+  margin-left: 0;
+  width: 100%;
+}
+
+.fullwidth {
+  margin: 2rem 0;
+}
+
+.alignleft {
+  @media #{$medium-up} {
+    align-items: flex-end;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 97%;
+  }
+  @media #{$large-up} {
+    width: 100%;
+  }
+  img {
+    @media #{$medium-up} {
+      flex: 0 0 70%;
+      width: 70%;
+    }
+  }
+  figcaption {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+}
+
+.alignright {
+  @extend %clearfix;
+  @media #{$medium-up} {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: row-reverse;
+    margin-left: auto;
+    margin-right: auto;
+    width: 97%;
+  }
+  @media #{$large-up} {
+    width: 100%;
+  }
+  img {
+    @media #{$medium-up} {
+      flex: 0 0 70%;
+      width: 70%;
+    }
+  }
+  figcaption {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+}
+
+.small__right {
+  float: right;
+  margin-left: rem-calc(30px);
+  width: 40%;
+  @media #{$large-up} {
+    width: 45%;
+  }
+  figcaption {
+    margin: 0 auto;
+    width: 90%;
+  }
+}
+
+.small__left {
+  float: left;
+  margin-right: rem-calc(30px);
+  width: 40%;
+  @media #{$large-up} {
+    width: 45%;
+  }
+  figcaption {
+    margin: 0 auto;
+    width: 90%;
+  }
+}
+
+.photo-grid {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  figcaption {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    @media #{$medium-up} {
+      width: 90%;
+    }
+    @media #{$large-up} {
+      width: 65%;
+    }
+  }
+  @media #{$medium-up} {
+    width: 100%;
+  }
+  img {
+    padding-bottom: rem-calc(6px);
+    @media #{$medium-up} {
+      padding-left: rem-calc(3px);
+      padding-right: rem-calc(3px);
+    }
+  }
+  .grid-thirds {
+    @media #{$medium-up} {
+      width: 33.3%;
+    }
+  }
+  .grid-half {
+    @media #{$medium-up} {
+      width: 50%;
+    }
+  }
+}

@@ -1,0 +1,69 @@
+// -----------------------------------------
+// GLOBAL STYLESHEET
+// -----------------------------------------
+// Created and Authored by Tim Smith.
+// -----------------------------------------
+// This stylesheet should only be a table of contents of styles.
+// The meat of the styles will be in the individual partials in
+// an effort to keep the CSS as dry as possible.
+// -----------------------------------------
+
+
+// RESET THIS MUTHA!
+// -----------------------------------------
+// @reset
+// Reseting and bringing in the foundations of our CSS.
+// -----------------------------------------
+
+@import '_redbat/normalize';
+@import '_redbat/reset';
+@import '_redbat/mixins';
+
+
+// VARIABLES
+// -----------------------------------------
+// @variables
+// Setting up variables. Bringing in Colors and Spacing.
+// -----------------------------------------
+
+@import '_redbat/bits';
+
+
+// TOOLS
+// -----------------------------------------
+// @tools
+// Setting up tools. Bringing in Clearfix.
+// -----------------------------------------
+
+@import '_redbat/clearfix';
+
+
+// BASE STYLES
+// -----------------------------------------
+// @base
+// Setting up base. Bringing in Type, Images, Forms, and Icons.
+// -----------------------------------------
+
+@import '_redbat/type';
+@import '_redbat/images';
+@import '_redbat/icons';
+
+
+// COMPONENTS
+// -----------------------------------------
+// @components
+// Setting up components & reusable objects.
+// -----------------------------------------
+
+@import '_redbat/objects';
+@import '_redbat/buttons';
+
+
+// LAYOUT
+// -----------------------------------------
+// @layout
+// -----------------------------------------
+
+@import '_layout/header';
+@import '_layout/maincontent';
+@import '_layout/footer';
