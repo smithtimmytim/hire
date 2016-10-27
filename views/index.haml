@@ -3,11 +3,8 @@
 %table.avabilitiy
   %tbody
     - weeks.each do |week|
-      %tr{ class:"#{week[:booked] ? 'class="booked"' : 'class="available"'}"}
-        %td
-          = week[:start_date]
-          &ndash;
-          = week[:end_date]
+      %tr{ class:"#{week[:booked] ? 'booked' : 'available'}"}
+        %td #{week[:start_date]}&ndash;#{week[:end_date]}:
         %td
           - if week[:booked]
             Booked
