@@ -1,3 +1,45 @@
 // -------------------------------
 // HEADER
 // -------------------------------
+
+.header {
+  background-color: $slate;
+  margin-bottom: 7rem;
+  padding: 5rem 0;
+  position: relative;
+  z-index: 2;
+  &:before {
+    -webkit-backface-visibility: hidden;
+    background: $slate;
+    bottom: -41px;
+    content: '';
+    height: 70px;
+    left: 0;
+    position: absolute;
+    -webkit-transform: skewY(-2.5deg);
+    -moz-transform: skewY(-2.5deg);
+    -ms-transform: skewY(-2.5deg);
+    -o-transform: skewY(-2.5deg);
+    transform: skewY(-2.5deg);
+    width: 100%;
+    z-index: 1;
+  }
+}
+
+.header__branding {
+  margin: 0 auto 2rem;
+  max-width: 640px;
+}
+
+.header__text {
+  margin: 0 auto;
+  max-width: 640px;
+  h1 {
+    color: #F4DDB5;
+    font-size: 3.5rem;
+    margin: 0;
+  }
+  p {
+    color: lighten($slate, 40%);
+  }
+}
