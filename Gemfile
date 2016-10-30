@@ -22,8 +22,10 @@ gem 'rack-canonical-host'
 gem 'sprockets'
 gem 'sass'
 gem 'sprockets-sass'
-gem 'bourbon'
 gem 'haml'
+
+# Markdown
+gem 'redcarpet'
 
 # Development dependencies
 group :development do
