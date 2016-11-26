@@ -9,6 +9,7 @@ task :console do
 end
 
 desc 'Book a week'
+# rake "book[date]"
 task :book, [:start_day] do |_t, args|
   require 'chronic'
   start_date = Chronic.parse(args[:start_day])
