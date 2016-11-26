@@ -39,7 +39,7 @@
 }
 
 .service__icon {
-  flex: 0 1 20%;
+  flex: 0 1 30%;
   margin-bottom: 1.5rem;
   order: 1;
   width: 220px;
@@ -48,13 +48,19 @@
     order: 0;
     width: auto;
   }
+  @media #{$large-up} {
+    flex: 0 1 20%;
+  }
 }
 
 .service__text {
-  flex: 0 1 40%;
+  flex: 0 1 60%;
   order: 2;
   @media #{$medium-up} {
     order: 0;
+  }
+  @media #{$large-up} {
+    flex: 0 1 40%;
   }
 }
 
@@ -85,6 +91,9 @@
   transform: rotate(3deg);
   width: 90%;
   @media #{$medium-up} {
+    width: 75%;
+  }
+  @media #{$large-up} {
     width: 55%;
   }
   &:nth-child(odd) {
@@ -109,7 +118,7 @@
   margin: 2rem auto 0;
   padding: 1rem;
   width: 90%;
-  @media #{$medium-up} {
+  @media #{$large-up} {
     width: 65%;
   }
   td {
