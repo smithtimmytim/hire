@@ -52,9 +52,6 @@
     -o-transform: skewY(-10deg);
     transform: skewY(-10deg);
     @media #{$medium-up} {
-      font-size: 7.6rem;
-    }
-    @media #{$large-up} {
       font-size: 20vh;
     }
   }
