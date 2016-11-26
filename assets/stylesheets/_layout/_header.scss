@@ -35,9 +35,9 @@
 .header__text {
   color: rgba(white, .7);
   margin: 0 auto 3rem;
-  width: 90%;;
+  width: 90%;
   @media #{$medium-up} {
-    margin: 0;
+    margin: 0 0 3rem;
     padding: 0 3rem;
     width: 660px;
   }
