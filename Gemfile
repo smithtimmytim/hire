@@ -11,6 +11,7 @@ gem 'puma'
 
 # Time
 gem 'chronic'
+gem 'rake'
 
 # Key-value store
 gem 'redis'
