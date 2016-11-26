@@ -16,6 +16,7 @@ html {
 body {
   @extend %sans;
 
+  background-color: white;
   color: $body-color;
   line-height: 140%;
 }
@@ -50,6 +51,16 @@ h5 {
 }
 
 // TEXT --------------------------
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  @media #{$medium-up} {
+    text-align: center;
+  }
+}
 
 p {
   font-size: 1.1rem;
@@ -150,14 +161,34 @@ ul {
 }
 
 ol {
-  list-style-type: decimal;
-  margin-bottom: rem-calc(25px);
+  counter-reset: my-counter;
+  list-style: none;
+  margin-bottom: 1.5rem;
+  margin-left: 4rem;
+  padding: 0;
   text-align: left;
   li {
     font-size: 1.1rem;
     line-height: 1.7;
-    margin-bottom: rem-calc(2px);
-    margin-left: 2.3rem;
+    margin-bottom: .2rem;
+    padding-left: 30px;
+    position: relative;
+    &:before {
+      background-color: $jazz-color;
+      border-radius: 50%;
+      color: white;
+      content: counter(my-counter);
+      counter-increment: my-counter;
+      display: block;
+      float: left;
+      font-size: 1.2rem;
+      font-weight: 600;
+      height: 55px;
+      line-height: 55px;
+      margin-left: -75px;
+      text-align: center;
+      width: 55px;
+    }
     @media #{$medium-up} {
       font-size: 1rem;
     }
@@ -168,9 +199,9 @@ ol {
     }
     p {
       font-size: inherit;
-      margin: 0 0 rem-calc(25px) 0;
+      // margin: 0 0 rem-calc(25px) 0;
       &:last-child {
-        margin-bottom: rem-calc(15px);
+        margin-bottom: 1rem;
       }
     }
   }
@@ -238,13 +269,7 @@ hr {
 // LINKS -------------------------
 
 a {
-  border-bottom: 1px solid transparent;
-  color: $link-color;
-  text-decoration: none;
+  color: inherit;
+  text-decoration: underline;
   transition: .2s ease;
-  &:hover,
-  &:focus {
-    border-bottom: 1px solid;
-    color: lighten($link-color, 10%);
-  }
 }

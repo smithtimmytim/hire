@@ -12,6 +12,10 @@
   font-weight: 600;
   padding: .5rem .7rem;
   text-decoration: none;
+  &:hover,
+  &:focus {
+    border: 0;
+  }
   &--primary {
     background: $jazz-color;
     color: white;
@@ -29,6 +33,21 @@
   }
 }
 
+.button--secondary {
+  background-color: $dark-color;
+  box-shadow: 0 3px 0 darken($dark-color, 7%);
+  color: white;
+  transition: background-color 300ms ease;
+  &:hover,
+  &:focus {
+    background-color: darken($dark-color, 5%);
+  }
+  &:active {
+    position: relative;
+    top: 2px;
+  }
+}
+
 .button--outline {
   border: 1px solid lighten($dark-color, 25%);
   color: lighten($dark-color, 25%);
@@ -43,12 +62,12 @@
     }
   }
   &.button--light {
-    border-color: lighten($slate, 40%);
-    color: lighten($slate, 40%);
+    border-color: rgba(white, .7);
+    color: rgba(white, .7);
     &:hover,
     &:focus {
-      background-color: $jazz-color;
-      border-color: $jazz-color;
+      background-color: $dark-color;
+      border-color: $dark-color;
       color: white;
     }
   }

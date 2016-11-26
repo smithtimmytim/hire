@@ -1,10 +1,4 @@
-%table.avabilitiy
-  %tbody
-    - weeks.each do |week|
-      %tr{ class:"#{week[:booked] ? 'booked' : 'available'}"}
-        %td #{week[:start_date]}&ndash;#{week[:end_date]}:
-        %td
-          - if week[:booked]
-            Booked
-          - else
-            %a{ href:"mailto:smith@ttimsmith.com?subject=I want to hire you from #{week[:start_date]} to #{week[:end_date]}" } Available
+= haml :"shared/what-i-do"
+= haml :"shared/how-it-works"
+= haml :"shared/testimonials"
+= haml :"shared/availability"
