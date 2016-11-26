@@ -11,8 +11,4 @@
     = haml :"shared/header"
     %main.main{ role: 'main' }
       = yield
-    %footer
-      %p
-        © 2012-#{Time.now.year}
-        %a{ href: 'https://ttimsmith.com', rel: 'external nofollow' }
-          Timothy B. Smith
+    = haml :"shared/footer"

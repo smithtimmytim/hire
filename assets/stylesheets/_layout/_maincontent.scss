@@ -2,7 +2,130 @@
 // MAIN CONTENT
 // -------------------------------
 
+.section__title {
+  font-size: 2.3rem;
+  font-weight: 300;
+  margin: 0 0 3.5rem;
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 4rem;
+  width: 90%;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  @media #{$medium-up} {
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 0 4rem;
+    width: 100%;
+  }
+}
+
+.service__section {
+  @media #{$medium-up} {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}
+
+.service__icon {
+  flex: 0 1 20%;
+  margin-bottom: 1.5rem;
+  order: 1;
+  width: 220px;
+  @media #{$medium-up} {
+    margin-bottom: 0;
+    order: 0;
+    width: auto;
+  }
+}
+
+.service__text {
+  flex: 0 1 40%;
+  order: 2;
+  @media #{$medium-up} {
+    order: 0;
+  }
+}
+
+.service__title {
+  color: $jazz-color;
+  margin: 0 0 .2rem;
+  text-transform: uppercase;
+}
+
+.service__description {
+  margin: 0;
+}
+
+.testimonials {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial {
+  background-color: white;
+  border: 0;
+  border-radius: 3px;
+  box-shadow: 0 3px 0 rgba(0,0,0,.1);
+  color: lighten($body-color, 20%);
+  font-style: italic;
+  line-height: 1.6;
+  padding: 1rem;
+  transform: rotate(3deg);
+  width: 90%;
+  @media #{$medium-up} {
+    width: 55%;
+  }
+  &:nth-child(odd) {
+    transform: rotate(-3deg);
+  }
+  &:nth-child(even) {
+    align-self: flex-end;
+  }
+}
+
+.testimonial__source {
+  font-style: normal;
+  font-weight: 600;
+  margin-top: .8rem;
+}
+
+.availability__table {
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0 3px 0 rgba(0,0,0,.1);
+  color: $body-color;
+  margin: 2rem auto 0;
+  padding: 1rem;
+  width: 90%;
+  @media #{$medium-up} {
+    width: 65%;
+  }
+  td {
+    border-bottom: 1px solid #EEE;
+    border-collapse: collapse;
+    padding: .45rem 0;
+  }
+  tr:last-child {
+    td {
+      border: 0;
+      padding-bottom: 0;
+    }
+  }
+}
 
 .booked {
-  color: lighten($body-color, 30%);
+  color: rgba(black, .2);
+  text-decoration: line-through;
 }

@@ -7,13 +7,71 @@
 
   margin: 0 auto;
   position: relative;
-  width: 100%;
+  width: 90%;
   @media #{$medium-up} {
     max-width: 768px;
   }
   @media #{$large-up} {
-    max-width: 1000px;
+    max-width: 1100px;
   }
+}
+
+.container--small {
+  @media #{$medium-up} {
+    max-width: 640px;
+  }
+
+  @media #{$large-up} {
+    max-width: 640px;
+  }
+}
+
+// Section -----------------------
+// Reusable section.
+// -------------------------------
+
+.section {
+  padding: 4rem 0;
+}
+
+.section--top {
+  padding: 2rem 0 4rem;
+}
+
+.section--transparent {
+  color: lighten($dark-color, 40%);
+}
+
+.section--white {
+  background-color: white;
+}
+
+.section--dark {
+  background-color: $dark-color;
+  color: lighten($dark-color, 40%);
+  .section__title {
+    color: white;
+  }
+}
+
+.section--third {
+  background-color: $third-color;
+  color: lighten($third-color, 30%);
+  .section__title {
+    color: white;
+  }
+}
+
+.section--jazz {
+  background-color: $jazz-color;
+  color: lighten($jazz-color, 28%);
+  .section__title {
+    color: white;
+  }
+}
+
+.section--yellow {
+  background-color: $yellow;
 }
 
 svg {
@@ -23,50 +81,4 @@ svg {
 iframe {
   margin: 1rem 0;
   width: 100%;
-}
-
-// Card --------------------------
-// Basically a reusable panel that
-// sits behind anything.
-// -------------------------------
-
-.card {
-  padding: 1.3rem;
-  @media #{$medium-up} {
-    border-radius: $global-radius;
-  }
-  h2 {
-    margin-top: 0;
-    width: 100%;
-  }
-}
-
-.card--large {
-  @media #{$large-up} {
-    margin: 0 auto;
-    width: 80%;
-  }
-}
-
-.card--dark {
-  background-color: $slate;
-  color: lighten($slate, 40%);
-  h2 {
-    color: white;
-  }
-}
-
-.card--jazz {
-  background-color: $jazz-color;
-  color: lighten($jazz-color, 20%);
-  h2 {
-    color: white;
-  }
-  .button--primary {
-    background: $slate;
-    &:focus,
-    &:hover {
-      background: lighten($slate, 10%);
-    }
-  }
 }

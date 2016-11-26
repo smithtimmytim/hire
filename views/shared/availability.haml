@@ -1,0 +1,15 @@
+%section.section.section--third#availability
+  .container.container--small
+    %h2.section__title When I’m Available
+    :markdown
+      My work week is limited to **30 hours**. If you need more time in a week, I try to be flexible if possible. A week is considered booked once you've signed my consulting agreement, and a deposit has been paid.
+  %table.availability__table
+    %tbody
+      - @weeks.each do |week|
+        %tr{ class:"#{week[:booked] ? 'booked' : 'available'}"}
+          %td #{week[:start_date]}&ndash;#{week[:end_date]}:
+          %td.text-right
+            - if week[:booked]
+              Unavailable
+            - else
+              %a{ href:"mailto:smith@ttimsmith.com?subject=I want to hire you from #{week[:start_date]} to #{week[:end_date]}" } Book your project

@@ -3,43 +3,56 @@
 // -------------------------------
 
 .header {
-  background-color: $slate;
-  margin-bottom: 7rem;
-  padding: 5rem 0;
+  align-items: center;
+  background-color: $jazz-color;
+  background-position: center 30%;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
   position: relative;
   z-index: 2;
-  &:before {
-    -webkit-backface-visibility: hidden;
-    background: $slate;
-    bottom: -41px;
-    content: '';
-    height: 70px;
-    left: 0;
-    position: absolute;
-    -webkit-transform: skewY(-2.5deg);
-    -moz-transform: skewY(-2.5deg);
-    -ms-transform: skewY(-2.5deg);
-    -o-transform: skewY(-2.5deg);
-    transform: skewY(-2.5deg);
-    width: 100%;
-    z-index: 1;
+  @media screen and (min-height: 62.5em) {
+    height: 70vh;
+  }
+  @media #{$medium-up} {
+    flex-direction: row;
+    height: 90vh;
   }
 }
 
-.header__branding {
-  margin: 0 auto 2rem;
-  max-width: 640px;
+.header__image {
+  background-image: url('tim-2016_4x3.jpg');
+  background-position: 60% 30%;
+  background-size: cover;
+  height: 35vh;
+  width: 100%;
+  @media #{$medium-up} {
+    height: 100%;
+    width: 520px;
+  }
 }
 
 .header__text {
-  margin: 0 auto;
-  max-width: 640px;
-  h1 {
-    color: #F4DDB5;
-    font-size: 3.5rem;
+  color: rgba(white, .7);
+  margin: 0 auto 3rem;
+  width: 90%;;
+  @media #{$medium-up} {
     margin: 0;
+    padding: 0 3rem;
+    width: 660px;
   }
-  p {
-    color: lighten($slate, 40%);
+
+  h1 {
+    color: white;
+    font-size: 4.5rem;
+    margin: 3rem 0 4rem;
+    -webkit-transform: skewY(-10deg);
+    -moz-transform: skewY(-10deg);
+    -ms-transform: skewY(-10deg);
+    -o-transform: skewY(-10deg);
+    transform: skewY(-10deg);
+    @media #{$medium-up} {
+      font-size: 7.6rem;
+    }
   }
 }

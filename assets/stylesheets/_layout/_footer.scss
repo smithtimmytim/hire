@@ -1,3 +1,9 @@
 // -------------------------------
 // FOOTER
 // -------------------------------
+
+.footer {
+  background-color: $dark-color;
+  color: lighten($dark-color, 40%);
+  padding: 1rem 0;
+}
