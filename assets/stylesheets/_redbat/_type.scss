@@ -6,29 +6,44 @@
 // BASE TYPE ---------------------
 
 html {
-  font-size: 16px;
+  font-size: 18px;
   -webkit-font-smoothing: antialiased;
   @media #{$medium-up} {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 
 body {
-  @extend %sans;
-
   background-color: white;
   color: $body-color;
+  font-family: $sans;
   line-height: 140%;
 }
 
-// FONTS -------------------------
-
-%sans {
-  font-family: 'Whitney SSm A', 'Whitney SSm B', system, -apple-system, BlinkMacSystemFont, Avenir, sans-serif;
+.wf-loading {
+  opacity: 0;
+  visibility: hidden;
 }
 
-%sans-con {
-  font-family: 'Whitney Cond A', 'Whitney Cond B', system, -apple-system, BlinkMacSystemFont, Avenir, sans-serif;
+.wf-active {
+  opacity: 1;
+  transition: opacity 500ms ease;
+  visibility: visible;
+}
+
+.wf-inactive {
+  font-family: system, -apple-system, BlinkMacSystemFont, Avenir, sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  opacity: 1;
+  transition: opacity 500ms ease;
+  visibility: visible;
+  @media #{$medium-up} {
+    font-size: 18px;
+  }
+  @media #{$xxlarge-up} {
+    font-size: 21px;
+  }
 }
 
 // HEADINGS ----------------------
@@ -39,8 +54,7 @@ h3,
 h4,
 h5,
 h6 {
-  @extend %sans-con;
-
+  font-family: $sans-con;
   line-height: 130%;
 }
 
@@ -64,7 +78,7 @@ h5 {
 
 p {
   font-size: 1.1rem;
-  line-height: 1.7;
+  line-height: 1.5;
   margin-bottom: rem-calc(15px);
   &:last-child {
     margin-bottom: 0;
@@ -90,7 +104,7 @@ h2 {
 
 h3 {
   color: lighten($dark-color, 35%);
-  font-size: 1.3rem;
+  font-size: 1.15rem;
   font-weight: 600;
   margin: 2.3rem 0 0;
 }
@@ -173,6 +187,11 @@ ol {
     margin-bottom: .2rem;
     padding-left: 30px;
     position: relative;
+    strong {
+      color: wheat;
+      font-family: $sans-con;
+      font-size: 1.05rem;
+    }
     &:before {
       background-color: $jazz-color;
       border-radius: 50%;
@@ -199,7 +218,6 @@ ol {
     }
     p {
       font-size: inherit;
-      // margin: 0 0 rem-calc(25px) 0;
       &:last-child {
         margin-bottom: 1rem;
       }
@@ -210,10 +228,10 @@ ol {
 // INLINE TYPE -------------------
 
 strong {
-  font-weight: 700;
+  font-weight: 600;
   em {
     font-style: italic;
-    font-weight: 700;
+    font-weight: 600;
   }
 }
 
@@ -254,8 +272,6 @@ blockquote {
 
 // HR ----------------------------
 hr {
-  @extend %clearfix;
-
   border: solid $border-color;
   border-width: 2px 0 0;
   display: block;

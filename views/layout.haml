@@ -13,7 +13,7 @@
     %meta{ name: 'description', content: 'Hire Tim Smith for UX/UI Design, Frontend Development, and to present a talk or workshop' }
     %meta{ name: 'keywords', content: 'tim smith, timothy b smith, designer, frontend developer, ux design, product design, hire tim smith, hire timothy b smith' }
     %title Hire Tim Smith
-    %link{ href: '//cloud.typography.com/6973314/6451952/css/fonts.css', rel: 'stylesheet', type: 'text/css' }
+    %link{ href: '//cloud.typography.com/6973314/7115972/css/fonts.css', rel: 'stylesheet', type: 'text/css' }
     %link{ href: '/assets/global.css', rel: 'stylesheet', type: 'text/css' }
     %meta{ content: 'width=device-width, initial-scale=1, user-scalable=no', name: 'viewport' }
   %body
@@ -21,3 +21,13 @@
     %main.main{ role: 'main' }
       = yield
     = haml :"shared/footer"
+
+    :javascript
+      (function(d) {
+        var config = {
+          kitId: 'ior8lkg',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);

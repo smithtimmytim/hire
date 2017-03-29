@@ -3,7 +3,7 @@
 // -------------------------------
 
 .button {
-  @extend %sans;
+  font-family: $sans;
 
   border: 0;
   border-radius: 3px;

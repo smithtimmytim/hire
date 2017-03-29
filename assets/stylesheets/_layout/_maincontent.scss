@@ -5,7 +5,7 @@
 .section__title {
   font-size: 2.3rem;
   font-weight: 300;
-  margin: 0 0 3.5rem;
+  margin: 0 0 1.5rem;
 }
 
 .service {
@@ -67,7 +67,6 @@
 .service__title {
   color: $jazz-color;
   margin: 0 0 .2rem;
-  text-transform: uppercase;
 }
 
 .service__description {
@@ -115,6 +114,7 @@
   border-radius: 3px;
   box-shadow: 0 3px 0 rgba(0,0,0,.1);
   color: $body-color;
+  font-family: $sans-con;
   margin: 2rem auto 0;
   padding: 1rem;
   width: 90%;
@@ -130,6 +130,20 @@
     td {
       border: 0;
       padding-bottom: 0;
+    }
+  }
+  .available {
+    a {
+      opacity: 0;
+      visibility: hidden;
+    }
+    &:hover,
+    &:focus {
+      a {
+        opacity: 1;
+        transition: opacity .4s ease-in-out;
+        visibility: visible;
+      }
     }
   }
 }

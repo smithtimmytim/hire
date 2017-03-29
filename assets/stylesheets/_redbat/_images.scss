@@ -18,7 +18,7 @@ figure {
 }
 
 figcaption {
-  @extend %sans;
+  font-family: $sans;
 
   color: lighten($dark-color, 20%);
   font-size: .9rem;
