@@ -14,8 +14,8 @@
 }
 
 .header__image {
-  display: flex;
   @media #{$medium-up} {
+    display: flex;
     flex: 0 0 45%;
   }
   @media #{$large-up} {
